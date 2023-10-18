@@ -43,7 +43,7 @@ const Navbar = () => {
   console.log(account);
 
   const getdetailvaliduser = async () => {
-    const res = await fetch("/validuser", {
+    const res = await fetch("https://amazonclonebackend-7dm4.onrender.com/validuser", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -70,7 +70,7 @@ const Navbar = () => {
   };
 
   const logoutuser = async () => {
-    const res2 = await fetch("/lougout", {
+    const res2 = await fetch("https://amazonclonebackend-7dm4.onrender.com/lougout", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -209,7 +209,7 @@ const Navbar = () => {
           >
             <MenuItem onClick={handleClose}>My account</MenuItem>
             {account ? (
-              <MenuItem onClick={handleClose} onClick={logoutuser}>
+              <MenuItem onClick={logoutuser}>
                 <LogoutIcon style={{ fontSize: 16, marginRight: 3 }} />
                 Logout
               </MenuItem>

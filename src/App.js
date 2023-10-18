@@ -5,8 +5,8 @@ import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Header/Navbar";
 import MainComp from "./Components/Home/MainComp";
 import Newnav from "./Components/Newnav/Newnav";
-import Sign_in from "./Components/Signup_Signin/Sign_in";
-import Sign_up from "./Components/Signup_Signin/Sign_up";
+import SignIn from "./Components/Signup_Signin/Sign_in";
+import SignUp from "./Components/Signup_Signin/Sign_up";
 import { Routes, Route } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useEffect, useState } from "react";
@@ -27,8 +27,8 @@ function App() {
           <Newnav />
           <Routes>
             <Route path="/" element={<MainComp />} />
-            <Route path="/login" element={<Sign_in />} />
-            <Route path="/register" element={<Sign_up />} />
+            <Route path="/login" element={<SignIn />} />
+            <Route path="/register" element={<SignUp />} />
             <Route path="/getproductsone/:id" element={<Cart />} />
             <Route path="/buynow" element={<Buynow />} />
           </Routes>

@@ -29,7 +29,7 @@ const Sign_in = () => {
   const senddata = async (e) => {
     e.preventDefault();
     const { email, password } = logdata;
-    const res = await fetch("/login", {
+    const res = await fetch("https://amazonclonebackend-7dm4.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

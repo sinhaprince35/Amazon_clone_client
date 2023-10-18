@@ -39,21 +39,24 @@ const Sign_up = () => {
     //     position: "top-center",
     //   });
     // } else {
-      
+
     // }
-    const res = await fetch("/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        fname,
-        email,
-        mobile,
-        password,
-        cpassword,
-      }),
-    });
+    const res = await fetch(
+      "https://amazonclonebackend-7dm4.onrender.com/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fname,
+          email,
+          mobile,
+          password,
+          cpassword,
+        }),
+      }
+    );
     const data = await res.json();
     // console.log(data);
 

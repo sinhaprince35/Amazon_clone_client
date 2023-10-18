@@ -9,14 +9,17 @@ const Buynow = () => {
   const [cartdata, setCartdata] = useState("");
   // console.log(cartdata.carts);
   const getdatabuy = async () => {
-    const res = await fetch("/cartdetails", {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      credentials: "include",
-    });
+    const res = await fetch(
+      "https://amazonclonebackend-7dm4.onrender.com/cartdetails",
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      }
+    );
     const data = await res.json();
     if (res.status !== 201) {
       console.log("Error");
