@@ -57,7 +57,7 @@ const Cart = () => {
       alert("User Invalid");
     } else {
       // alert("Data added in your cart")
-      history("/buynow");
+      history("https://amazonclonebackend-7dm4.onrender.com/buynow");
       setAccount(data1);
     }
   };
